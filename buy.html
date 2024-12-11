@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group input[type="file"] {
+            border: none;
+        }
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Transaction</h2>
+        <form action="/submit" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="alamat">Arrival Address</label>
+                <input type="text" id="alamat" name="alamat" required>
+            </div>
+            <div class="form-group">
+                <label for="barang">Choose the Product</label>
+                <select id="barang" name="barang" required>
+                    <option value="">-- Product --</option>
+                    <option value="barang1">Barang 1</option>
+                    <option value="barang2">Barang 2</option>
+                    <option value="barang3">Barang 3</option>
+                    <option value="barang4">Barang 4</option>
+                    <option value="barang5">Barang 5</option>
+                    <option value="barang6">Barang 6</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bukti">Transfer Foto</label>
+                <input type="file" id="bukti" name="bukti" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Buy</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

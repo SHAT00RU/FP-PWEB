@@ -1,0 +1,101 @@
+.navbar{
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 1);
+}
+
+.brand {
+    color: Black;
+    font-weight: 900;
+}
+
+.home{
+    background: linear-gradient(rgba(181, 118, 244, 0.42), rgba(72, 132, 228, 0.443)), url(img/BaliBg1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+.btn{
+    transition: all 0.4s ease;
+    border-radius: 0px;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+.line1{
+    border-radius: 0;
+    height: 5px;
+    width: 15%;
+    background-color: rgb(116, 71, 240);
+    margin: auto;
+}
+
+.line2{
+    border-radius: 0;
+    height: 5px;
+    width: 20%;
+    background-color:rgba(0, 0, 0, 1);
+    margin: auto;
+}
+
+.section-padding{
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+img{
+    max-width: 100%;
+}
+
+.div-padding{
+    padding-top: 140px;
+    padding-bottom: 80px;
+}
+
+.footer-padding{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-margin{
+    margin-bottom: 50px;
+}
+
+.servis{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.img-zoom{
+    transition: all 0.5s ease;
+    position:relative;
+}
+
+.img-zoom-wrap{
+    transition: all 0.5s ease;
+}
+
+.img-zoom:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    background-color: blueviolet;
+    text-align: center;
+    color: white;
+}

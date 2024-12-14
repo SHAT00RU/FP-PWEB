@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transaction Form</title>
+    <title>Buy Handicraft</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f4f4f4;
         }
         .form-container {
             background: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
         .form-container h2 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #333;
             text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
         .form-group {
             margin-bottom: 15px;
@@ -37,58 +35,50 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        .form-group input,
-        .form-group select {
+        .form-group input, .form-group select {
             width: 100%;
-            padding: 10px;
+            padding: 8px;
+            box-sizing: border-box;
             border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .form-group input[type="file"] {
-            border: none;
+            border-radius: 4px;
         }
         .form-group button {
             width: 100%;
             padding: 10px;
-            background-color: #007BFF;
-            color: #fff;
+            background-color: #0032fc;
+            color: white;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 4px;
             cursor: pointer;
         }
         .form-group button:hover {
-            background-color: #0056b3;
+            background-color: #2b00ff;
         }
     </style>
 </head>
 <body>
     <div class="form-container">
         <h2>Transaction</h2>
-        <form action="/submit" method="post" enctype="multipart/form-data">
+        <form action="process_transaction.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="alamat">Arrival Address</label>
-                <input type="text" id="alamat" name="alamat" required>
+                <label for="address">Arrival Address</label>
+                <input type="text" id="address" name="address" required>
             </div>
             <div class="form-group">
-                <label for="barang">Choose the Product</label>
-                <select id="barang" name="barang" required>
+                <label for="product">Choose the Product</label>
+                <select id="product" name="product" required>
                     <option value="">-- Product --</option>
-                    <option value="barang1">Barang 1</option>
-                    <option value="barang2">Barang 2</option>
-                    <option value="barang3">Barang 3</option>
-                    <option value="barang4">Barang 4</option>
-                    <option value="barang5">Barang 5</option>
-                    <option value="barang6">Barang 6</option>
+                    <option value="product1">Product 1</option>
+                    <option value="product2">Product 2</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="bukti">Transfer Foto</label>
-                <input type="file" id="bukti" name="bukti" accept="image/*" required>
+                <label for="transfer_photo">Transfer Foto</label>
+                <input type="file" id="transfer_photo" name="transfer_photo" accept="image/*" required>
             </div>
             <div class="form-group">
                 <button type="submit">Buy</button>
